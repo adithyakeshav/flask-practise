@@ -1,0 +1,6 @@
+flask/.idea
+flask/.vscode
+flask/myenv
+flask/__pycache__
+flask/application/__pycache__
+flask/application/apis/__pycache__

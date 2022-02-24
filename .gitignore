@@ -1,6 +1,7 @@
-flask/.idea
-flask/.vscode
+.idea
+.vscode
 flask/myenv
-flask/__pycache__
-flask/application/__pycache__
-flask/application/apis/__pycache__
+
+mysql/db_data
+__pycache__
+.DS_Store

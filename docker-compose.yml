@@ -5,10 +5,10 @@ services:
     build: ./flask
     container_name: flask
     restart: always
-    environment: 
-      - FLASK-APP=run.py
     expose: 
       - 5000
+    links:
+      - mysql_db
 
   nginx:
     build: ./nginx
@@ -16,3 +16,15 @@ services:
     restart: always
     ports:
       - 80:80
+
+  mysql_db:
+    build: ./mysql
+    container_name: db
+    volumes:
+      - ./mysql/db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: flask_db
+      MYSQL_USER: adithya
+      MYSQL_PASSWORD: 1234
+    

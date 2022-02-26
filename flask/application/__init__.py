@@ -14,8 +14,8 @@ db = SQLAlchemy(app)
 
 from application.apis.helloworld import HelloWorld
 
-api.add_resource(HelloWorld, "/")
+api.add_resource(HelloWorld, "/flask")
 
 from application.apis.person import Fetch_person, Create_person
-api.add_resource(Create_person, "/person")
-api.add_resource(Fetch_person, "/person/<email_id>")
+api.add_resource(Create_person, "/flask/person")
+api.add_resource(Fetch_person, "/flask/person/<email_id>")

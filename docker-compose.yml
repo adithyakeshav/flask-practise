@@ -7,8 +7,13 @@ services:
     restart: always
     expose: 
       - 5000
-    links:
-      - mysql_db
+
+  springboot:
+    build: ./SpringBootPractiseApp
+    container_name: spring_boot
+    restart: always
+    expose:
+      - 8080
 
   nginx:
     build: ./nginx
